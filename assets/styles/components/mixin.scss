@@ -1,0 +1,77 @@
+// BORDER RADIUS MIXIN
+@mixin b-rad($lt, $rt, $rb, $lb) {
+    border-radius: $lt $rt $rb $lb;
+}
+
+// SINGLE BORDER RADIUS
+@mixin rad($value) {
+    border-radius: $value;
+}
+
+// BORDER MIXIN
+@mixin border($val) {
+    @if $val == light {
+        border: solid 1px black;
+    } @else if $val == medium {
+        border: solid 3px black;
+    } @else if $val == bold {
+        border: solid 5px black;
+    } @else {
+        border: none;
+    }
+}
+
+// DISPLAY
+@mixin display($val) {
+    @if $val == start {
+        display: flex;
+        align-items: center;
+        justify-content: $val;
+    }
+    @else if $val == center {
+        display: flex;
+        align-items: $val;
+        justify-content: $val;
+    }
+    @else if $val == end {
+        display: flex;
+        align-items: center;
+        justify-content: $val;
+    }
+    @else if $val == between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @else if $val == around {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    @else if $val == even {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    @else if $val == block {
+        display: block;
+    }
+    @else {
+        display: none;
+    }
+}
+
+// TYPE OF MESSAGE MIXIN
+@mixin msg($var) {
+    @if $var == receive {
+        max-width: 70%;
+        background-color: var(--very-dark-desaturated-violet);
+    }
+}
+
+// APPEARANCE MIXIN
+@mixin appear($var) {
+    -webkit-appearance: $var;
+    -moz-appearance: $var;
+    appearance: $var;
+}

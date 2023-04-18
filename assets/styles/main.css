@@ -1,0 +1,296 @@
+:root {
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violet: hsl(264, 100%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 20%, 96%);
+  --light-grayish-violet-dark: hsl(270, 12%, 67%);
+  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --very-dark-desaturated-violet-trans: hsla(271, 36%, 24%, 0.301);
+  --very-light-magenta: hsl(289, 100%, 72%);
+  --trans: rgba(0, 0, 0, 0.178);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.detail {
+  width: 100%;
+  max-width: 800px;
+  min-height: 200px;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail .device {
+  width: 30%;
+  min-height: 300px;
+  background-color: var(--light-grayish-violet);
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+}
+.detail .device::before {
+  content: " ";
+  position: absolute;
+  top: -2.5%;
+  left: -5%;
+  width: 110%;
+  height: 105%;
+  background-color: var(--white);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 10px -5px var(--very-dark-desaturated-violet);
+}
+.detail .device .prof_details {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  min-height: 75px;
+  background: linear-gradient(90deg, var(--light-violet), var(--light-magenta));
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  gap: 10px;
+  color: var(--white);
+  font-weight: 700;
+  font-family: sans-serif;
+  position: relative;
+}
+.detail .device .prof_details::after {
+  content: " ";
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50%;
+  height: 20px;
+  border-radius: 30px;
+  background-color: var(--white);
+}
+.detail .device .profile_pic {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% 50% 50% 50%;
+}
+.detail .device .profile_pic img {
+  width: 90%;
+  border-radius: 50% 50% 50% 50%;
+}
+.detail .device .person .name {
+  font-size: 15px;
+}
+.detail .device .person .quote {
+  font-size: 11px;
+}
+.detail .device span.right {
+  margin-left: auto;
+}
+.detail .device .DM {
+  position: relative;
+  background-color: var(--light-grayish-violet);
+  min-height: 300px;
+  padding: 10px;
+  overflow: hidden;
+}
+.detail .device .DM .chat_box {
+  margin-bottom: 5px;
+  padding: 4px;
+  min-width: 20%;
+  max-width: 70%;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+.detail .device .DM .receiving {
+  border-radius: 10px 10px 10px 0;
+  color: var(--very-dark-desaturated-violet);
+  background-color: var(--trans);
+  clear: both;
+  transform: translateY(-1000px);
+  transition: 0.3s;
+}
+.detail .device .DM .sending {
+  float: right;
+  background-color: var(--white);
+  border-radius: 10px 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  transform: translateY(1000px);
+  transition: 0.3s;
+}
+.detail .device .DM .sending img {
+  border-radius: 10%;
+  width: 25%;
+  transform: translate(100px);
+  transition: 4s 1s;
+}
+.detail .device .DM .plan {
+  background: linear-gradient(90deg, var(--light-violet), var(--light-magenta));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+}
+.detail .device .DM .plan label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .device .DM .plan input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.detail .device .DM .plan .divert {
+  width: 12px;
+  height: 12px;
+  border: solid 1px black;
+  border-color: var(--white);
+  border-radius: 50%;
+  display: block;
+}
+.detail .device .DM .show {
+  transform: translateY(0px);
+}
+.detail .device .entry {
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  height: 50px;
+  background-color: var(--light-grayish-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .device .entry .input_box {
+  width: 90%;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  font-family: sans-serif;
+  color: var(--light-grayish-violet-dark);
+  font-size: 11px;
+}
+.detail .device .entry .send {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--very-dark-desaturated-violet);
+}
+.detail .device .entry .send img {
+  width: 40%;
+}
+.detail .information {
+  width: 70%;
+  padding-left: 40px;
+}
+.detail .information .info_wrap {
+  margin-left: auto;
+  width: 80%;
+  font-family: sans-serif;
+}
+.detail .information .info_wrap .title {
+  font-size: 40px;
+  color: var(--very-dark-desaturated-violet);
+  margin-bottom: 20px;
+}
+.detail .information .info_wrap .illustration {
+  color: var(--light-grayish-violet-dark);
+  line-height: 22px;
+}
+@media screen and (max-width: 768px) {
+  .detail .information {
+    width: 100%;
+    padding: 40px 10px;
+  }
+  .detail .information .info_wrap {
+    margin: auto;
+    text-align: center;
+  }
+  .detail .information .info_wrap .title {
+    font-size: 8vw;
+  }
+  .detail .device {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .detail .device {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail {
+    flex-direction: column;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: visible;
+    padding: 100px 0;
+  }
+}
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--light-grayish-violet-trans);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.wrap::after, .wrap::before {
+  content: " ";
+  position: absolute;
+  width: 30%;
+  height: 80%;
+}
+.wrap::after {
+  bottom: 0;
+  right: 0;
+  background-color: var(--light-grayish-violet);
+  border-radius: 500px 500px 0 0;
+  transform: translate(30%);
+}
+.wrap::before {
+  top: 0;
+  left: 0;
+  background-color: var(--light-violet);
+  border-radius: 0 0 500px 500px;
+  transform: translate(-20%);
+}
+@media screen and (max-width: 768px) {
+  .wrap::after {
+    display: none;
+  }
+  .wrap::before {
+    width: 50%;
+    height: 60%;
+  }
+}

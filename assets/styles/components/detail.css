@@ -1,0 +1,13 @@
+.detail {
+  width: 100%;
+  max-width: 900px;
+  min-height: 200px;
+  position: absolute;
+  z-index: 3;
+  border: solid 1px black;
+}
+.detail .device_wrap {
+  width: 30%;
+  min-height: 300px;
+  background-color: var(--white);
+}

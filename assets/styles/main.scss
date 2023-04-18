@@ -1,0 +1,84 @@
+// @font
+
+// variables
+
+// root
+:root {
+    // colors
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --light-grayish-violet-dark: hsl(270, 12%, 67%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --very-dark-desaturated-violet-trans: hsla(271, 36%, 24%, 0.301);
+    --very-light-magenta: hsl(289, 100%, 72%);
+    --trans: rgba(0, 0, 0, 0.178);
+    // typography
+}
+// asterisk
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    resize: none;
+}
+// importations
+@import "./components/mixin";
+@import "./components/detail";
+// html 
+html {
+    scroll-behavior: smooth;
+}
+// body 
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+// MEDIA QUERY FOR THE BODY
+@media screen and (max-width: 768px) {
+    body {
+        overflow: visible;
+        padding: 100px 0;
+    }
+}
+// wrap 
+.wrap {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--light-grayish-violet-trans);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    &::after,
+    &::before {
+        content: " ";
+        position: absolute;
+        width: 30%;
+        height: 80%;
+    }
+    &::after {
+        bottom: 0;
+        right: 0;
+        background-color: var(--light-grayish-violet);
+        @include b-rad(500px, 500px, 0, 0);
+        transform: translate(30%);
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        background-color: var(--light-violet);
+        @include b-rad(0, 0, 500px, 500px);
+        transform: translate(-20%);
+    }
+    @media screen and (max-width: 768px) {
+        &::after {
+            display: none;
+        }
+        &::before {
+            width: 50%;
+            height: 60%;
+        }
+    }
+}

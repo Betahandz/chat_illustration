@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <link rel="stylesheet" href="./assets/styles/main.css">
+
+  <!-- MY EXTERNAL SCRIPT -->
+  <script src="./assets/script/main.js" type="module"></script>
+  <!-- CAN ACTUALLY USE DEFER (BUT SINCE MODULE: NO NEED) -->
+</head>
+<body>
+
+  <div class="wrap">
+    <section class="detail">
+      <!-- the section for the device -->
+      <div class="device">
+        <!-- profile details -->
+        <section class="prof_details">
+          <span class="left">&langle;</span>
+          <!-- the profile avatar -->
+          <figure class="profile_pic">
+            <img src="images/avatar.jpg" alt="" loading="lazy">
+          </figure>
+          <!-- the name and cap -->
+          <article class="person">
+            <p class="name">Da - Hubb</p>
+            <p class="quote">Available to walk</p>
+          </article>
+          <span class="right">&rangle;</span>
+        </section>
+        <!-- the message section -->
+        <section class="DM">
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box receiving">
+            That sounds great, i did be happy with that;
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box receiving">
+            Could you send over some pictures of your Dog, please?
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box sending">
+            <img src="images/dog-image-1.jpg" alt="dog one" loading="lazy">
+            <img src="images/dog-image-2.jpg" alt="dog two" loading="lazy">
+            <img src="images/dog-image-3.jpg" alt="dog three" loading="lazy">
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box sending">
+            Here are a few pictures, she's a happy girl!!.
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box sending">
+            Can you make it?...
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box receiving">
+            She looks so happy the time we discussed works. How long can i take her out for?...
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box receiving plan">
+            <!-- the radio input -->
+            <label for="walk_plan_1">
+              <input type="radio" name="walk_plan_1" id="walk_plan_1">
+              <span class="divert"></span>
+            </label>
+            <!-- end of the radio input -->
+            <!-- walk duration of the dog -->
+            <p class="duration">30 minutes walk</p>
+            <!-- end of walk duration of the pet -->
+            <!-- the price for the service -->
+            <p class="fee"><b>$29</b></p>
+            <!-- end of the price for the service -->
+          </article>
+          <!-- end of this chat box -->
+          <!-- the receiver and the sender dming -->
+          <article class="chat_box receiving plan">
+            <!-- the radio input -->
+            <label for="walk_plan_2">
+              <input type="radio" name="walk_plan_2" id="walk_plan_2">
+              <span class="divert"></span>
+            </label>
+            <!-- end of the radio input -->
+            <!-- walk duration of the dog -->
+            <p class="duration">1 hour walk</p>
+            <!-- end of walk duration of the pet -->
+            <!-- the price for the service -->
+            <p class="fee"><b>$49</b></p>
+            <!-- end of the price for the service -->
+          </article>
+          <!-- end of this chat box -->
+
+        </section>
+        <!-- the message entry -->
+        <section class="entry">
+          <div class="input_box">
+            <p class="placeholder">Type a message</p>
+            <span class="send">
+              <img src="images/icon-angle-right.svg" alt="send" loading="lazy">
+            </span>
+          </div>
+        </section>
+      </div>
+      <!-- end of the device section -->
+      <!-- information about our chat app -->
+      <article class="information">
+        <section class="info_wrap">
+          <h1 class="title">Simple Booking</h1>
+          <p class="illustration">
+            Stay in touch with our dog walkers through the chat interface.
+            This makes it easy to discuss arrangements and make bookings.
+            Once the walk has been completed you can rate your walker and book
+            again through chat.
+          </p>
+        </section>
+      </article>
+      <!-- end of the infor about our chat app -->
+    </section>
+  </div>
+</body>
+</html>
